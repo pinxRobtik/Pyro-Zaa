@@ -109,7 +109,7 @@ requirements_path = path.join(
 
 
 def restart():
-    os.execvp(sys.executable, [sys.executable, "-m", "naya"])
+    os.execvp(sys.executable, [sys.executable, "-m", "Zaa"])
 
 
 async def is_heroku():
@@ -267,7 +267,7 @@ async def upstream(client: Client, message: Message):
         await status.edit(
             "`Naya-Pyro Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`",
         )
-        args = [sys.executable, "-m", "naya"]
+        args = [sys.executable, "-m", "Zaa"]
         execle(sys.executable, *args, environ)
         return
 
