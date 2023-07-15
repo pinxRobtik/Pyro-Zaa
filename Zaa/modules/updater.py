@@ -240,7 +240,7 @@ async def upstream(client: Client, message: Message):
             )
             repo.__del__()
             return
-        await status.edit("`[HEROKU]: Update Deploy Naya-Pyro Sedang Dalam Proses...`")
+        await status.edit("`[HEROKU]: Update Deploy Zaa-Pyro Sedang Dalam Proses...`")
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(
@@ -256,7 +256,7 @@ async def upstream(client: Client, message: Message):
         except GitCommandError:
             pass
         await status.edit(
-            "`Naya-Pyro Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
+            "`Zaa-Pyro Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`"
         )
     else:
         try:
@@ -265,7 +265,7 @@ async def upstream(client: Client, message: Message):
             repo.git.reset("--hard", "FETCH_HEAD")
         await updateme_requirements()
         await status.edit(
-            "`Naya-Pyro Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`",
+            "`Zaa-Pyro Berhasil Diupdate! Userbot bisa di Gunakan Lagi.`",
         )
         args = [sys.executable, "-m", "Zaa"]
         execle(sys.executable, *args, environ)
@@ -291,8 +291,8 @@ __HELP__ = f"""
 ✘ Bantuan Untuk Updater
 
 ๏ Perintah: <code>{cmd}update gas</code>
-◉ Penjelasan: Untuk melakukan update heroku deploy Naya-Pyro.
+◉ Penjelasan: Untuk melakukan update heroku deploy Zaa-Pyro.
 
 ๏ Perintah: <code>{cmd}goupdate</code>
-◉ Penjelasan: Untuk melakukan update vps deploy Naya-Pyro.
+◉ Penjelasan: Untuk melakukan update vps deploy Zaa-Pyro.
 """
