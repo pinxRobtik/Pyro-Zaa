@@ -6,7 +6,7 @@ from pyroza.pyroza.load import *
 from pyroza.pyroza.utils import *
 from pyroza.pyroza.utils.db import *
 from pyroza.version import __version__ as nay
-from pyroza.version import kynay_version as nan
+from pyroza.version import zaa_version as nan
 from pyrogram import __version__ as pyro
 from pyrogram import idle
 from uvloop import install
