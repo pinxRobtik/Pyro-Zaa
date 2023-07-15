@@ -29,7 +29,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def restart():
-    os.execvp(sys.executable, [sys.executable, "-m", "naya"])
+    os.execvp(sys.executable, [sys.executable, "-m", "Zaa"])
 
 
 XCB = [
@@ -59,7 +59,7 @@ async def restart_bot(_, message):
         LOGGER(__name__).info(f"{err}")
         return
     await msg.edit("✅ **Bot has restarted !**\n")
-    args = [sys.executable, "-m", "naya"]
+    args = [sys.executable, "-m", "Zaa"]
     execle(sys.executable, *args, environ)
 
 
@@ -121,7 +121,7 @@ async def usage_dynos(client, message):
     AppMinutes = math.floor(AppQuotaUsed % 60)
     await asyncio.sleep(1.5)
     text = f"""
-**Penggunaan Dyno Naya-Premium**
+**Penggunaan Dyno Zaa-Premium**
 
  ❏ Dyno terpakai:
  ├ Terpakai: `{AppHours}`**h**  `{AppMinutes}`**m**  [`{AppPercentage}`**%**]
@@ -140,9 +140,9 @@ async def shutdown_bot(client, message):
     await client.send_message(
         botlog_chat_id,
         "**#SHUTDOWN** \n"
-        "**Naya-Premium** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
+        "**Zaa-Premium** telah di matikan!\nJika ingin menghidupkan kembali silahkan buka heroku",
     )
-    await message.reply(" **Naya-Premium Berhasil di matikan!**")
+    await message.reply(" **Zaa-Premium Berhasil di matikan!**")
     if HAPP is not None:
         HAPP.process_formation()["worker"].scale(0)
     else:
@@ -161,7 +161,7 @@ async def logs_ubot(client, message):
     await client.send_document(
         message.chat.id,
         "Logs-Heroku.txt",
-        thumb="https://telegra.ph//file/976ad753d6073dde1f579.jpg",
+        thumb="Zaa/resources/logo.jpg",
         caption="**This is your Heroku Logs**",
     )
     await biji.delete()
